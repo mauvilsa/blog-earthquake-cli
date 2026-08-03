@@ -1,0 +1,5 @@
+# Settings for the client itself, so that they don't have to be given on every
+# run. For a real API this is where credentials and endpoints would live.
+distance_unit: mi
+min_magnitude: 4.0
+timeout: 60.0

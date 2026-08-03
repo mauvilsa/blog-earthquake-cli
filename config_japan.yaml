@@ -1,0 +1,12 @@
+# Settings for the client and for one of its subcommands. Run it with:
+#   python quakes_cli.py --config config_japan.yaml
+min_magnitude: 4.0
+
+search:
+  start: 2026-01-01
+  order_by: magnitude
+  limit: 5
+  area:
+    latitude: 36.2
+    longitude: 138.25
+    radius: 700
