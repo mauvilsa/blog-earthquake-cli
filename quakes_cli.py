@@ -5,6 +5,9 @@ The entire CLI is ``auto_cli(EarthquakeCatalog)``. jsonargparse reads the
 signatures and docstrings of the class to derive the options, the subcommands
 and the help. The only thing left to do here is to print whatever the called
 method returned, in a way that suits its type.
+
+All of it lives in :func:`main`, which is what the ``quakes`` command declared
+in ``pyproject.toml`` runs.
 """
 
 import json
@@ -58,8 +61,18 @@ def cell(value) -> str:
     return value.strftime("%Y-%m-%d %H:%M") if isinstance(value, datetime) else str(value)
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Run the command line interface."""
     try:
-        print(render(auto_cli(EarthquakeCatalog)))
+        result = auto_cli(
+            EarthquakeCatalog,
+            # Settings written here apply from any directory, without --config.
+            default_config_files=["~/.config/quakes.yaml"],
+        )
+        print(render(result))
     except CatalogError as ex:
         sys.exit(f"error: {ex}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,5 +1,5 @@
 # Settings for the client and for one of its subcommands. Run it with:
-#   python quakes_cli.py --config config_japan.yaml
+#   quakes --config config_japan.yaml
 min_magnitude: 4.0
 
 search:

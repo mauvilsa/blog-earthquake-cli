@@ -1,1 +1,0 @@
-jsonargparse[signatures]>=4.50.0
