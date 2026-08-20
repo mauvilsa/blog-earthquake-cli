@@ -19,7 +19,7 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "jsonargparse[signatures]>=4.50.0",
+    "jsonargparse[signatures,shtab]>=4.51.0",
 ]
 
 [project.urls]

@@ -17,12 +17,15 @@ from datetime import date, datetime
 
 from quakes_client import CatalogError, EarthquakeCatalog
 
-from jsonargparse import auto_cli
+from jsonargparse import auto_cli, set_parsing_settings
 from jsonargparse.typing import register_type
 
 # Teach jsonargparse how to read and write the one type it does not know about,
 # so that the client can keep using dates in its signatures.
 register_type(date, serializer=date.isoformat, deserializer=date.fromisoformat)
+
+# Add --print_completion, which writes the shell completion script for the CLI.
+set_parsing_settings(add_print_completion_argument=True)
 
 
 def render(result) -> str:
