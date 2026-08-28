@@ -14,3 +14,5 @@ The code is the subject of a series of posts, each one a step further from the c
 - [Part 3: Tab completion, without writing a completion script](part-3-tab-completion.md) — generating shell completions for bash, zsh, tcsh and fish out of the same type hints, and wiring them into the virtual environment.
 
 The repository holds the finished version, so it is ahead of the earlier posts. `quakes_client.py` is the client, plain Python that knows nothing about command lines. `quakes_cli.py` is the interface.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mauvilsa/blog-earthquake-cli)
