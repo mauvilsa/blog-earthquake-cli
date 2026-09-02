@@ -12,5 +12,6 @@ The code is the subject of a series of posts, each one a step further from the c
 - [Part 1: From API client to CLI, without writing a parser](part-1-from-api-client-class-to-cli.md) — building the client, and getting the whole command line interface out of its signatures and docstrings with one call to `auto_cli`.
 - [Part 2: A CLI that works from anywhere](part-2-a-cli-that-works-from-anywhere.md) — making the project pip installable, so that `quakes` runs from any directory, and giving it a config file it finds on its own.
 - [Part 3: Tab completion, without writing a completion script](part-3-tab-completion.md) — generating shell completions for bash, zsh, tcsh and fish out of the same type hints, and wiring them into the virtual environment.
+- [Part 4: Settings from the environment](part-4-env-vars.md) — making every option, and the subcommand itself, settable through environment variables, so that a container or a CI job can be driven entirely by them.
 
 The repository holds the finished version, so it is ahead of the earlier posts. `quakes_client.py` is the client, plain Python that knows nothing about command lines. `quakes_cli.py` is the interface.

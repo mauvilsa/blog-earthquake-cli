@@ -71,6 +71,11 @@ def main() -> None:
             EarthquakeCatalog,
             # Settings written here apply from any directory, without --config.
             default_config_files=["~/.config/quakes.yaml"],
+            # And these let a process pass settings in without a file at all.
+            # The prefix is spelled out because prog changes when the module is
+            # run directly, and the variable names should not change with it.
+            env_prefix="QUAKES",
+            default_env=True,
         )
         print(render(result))
     except CatalogError as ex:
